@@ -39,13 +39,21 @@
 <style>
     .hero {
         position: relative;
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        padding-top: 5rem;
+        padding: 4rem 0;
+        margin-top: -2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hero {
+            margin-top: 0;
+            padding: 3rem 0;
+        }
     }
 
     .hero__video {
