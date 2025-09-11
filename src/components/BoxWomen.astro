@@ -1,0 +1,228 @@
+---
+---
+
+<section class="box-women" id="box-women">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section__title">BOXEO <span class="text-primary">MUJERES</span></h2>
+            <p class="section__subtitle">Entrena con confianza en un ambiente diseñado para ti</p>
+        </div>
+        
+        <div class="content-grid">
+            <div class="content-text">
+                <h3>Empoderamiento a través del boxeo</h3>
+                <p>Nuestro programa de Box para Mujeres ofrece un espacio seguro y motivador donde puedes desarrollar tu fuerza, técnica y confianza. Diseñado especialmente para mujeres de todas las edades y niveles.</p>
+                
+                <div class="benefits">
+                    <h4>¿Por qué elegir nuestro programa?</h4>
+                    <ul>
+                        <li><span class="material-icons">fitness_center</span> Fortalecimiento físico y mental</li>
+                        <li><span class="material-icons">security</span> Defensa personal práctica</li>
+                        <li><span class="material-icons">local_fire_department</span> Quema de calorías efectiva</li>
+                        <li><span class="material-icons">woman</span> Ambiente exclusivo femenino</li>
+                        <li><span class="material-icons">emoji_events</span> Aumento de autoestima</li>
+                        <li><span class="material-icons">groups</span> Comunidad de apoyo</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="content-image">
+                <img 
+                    src="/boxmujeres.avif"
+                    alt="Mujer entrenando boxeo con determinación"
+                />
+            </div>
+        </div>
+
+
+        <div class="cta-section">
+            <h3>¡Únete a nuestra comunidad!</h3>
+            <p>Primera clase gratis - Descubre tu potencial</p>
+            <a href="#contacto" class="button button--primary">
+                <span class="material-icons">sports_martial_arts</span>
+                Primera clase gratis
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .box-women {
+        padding: 6rem 0;
+        background-color: var(--color-dark);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    .text-primary {
+        color: var(--color-primary);
+    }
+
+    .section__subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .content-text h3 {
+        color: var(--color-primary);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-text p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+    .benefits h4,
+    .program-info h4 {
+        color: var(--color-primary);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefits ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .benefits li {
+        opacity: 0.9;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .benefits li .material-icons {
+        color: var(--color-primary);
+        font-size: 1.25rem;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .info-item {
+        background-color: var(--color-dark);
+        padding: 1rem;
+        border-radius: 6px;
+    }
+
+    .info-item span {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-item p {
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    .content-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .cta-section {
+        text-align: center;
+        background-color: var(--color-dark);
+        padding: 3rem;
+        border-radius: 12px;
+    }
+
+    .cta-section h3 {
+        color: var(--color-primary);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .button--primary {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+    }
+
+    .button--primary:hover {
+        background-color: var(--color-primary-dark);
+    }
+
+    @media screen and (max-width: 768px) {
+        .box-women {
+            padding: 4rem 0;
+        }
+
+        .section__title {
+            font-size: 2rem;
+        }
+
+        .content-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .content-image img {
+            height: 250px;
+        }
+
+        .cta-section {
+            padding: 2rem;
+        }
+    }
+</style>

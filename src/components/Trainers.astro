@@ -1,0 +1,160 @@
+---
+---
+
+<section class="trainers" id="entrenadores">
+    <div class="container">
+        <h2 class="trainers__title">NUESTROS <span class="text-primary">ENTRENADORES</span></h2>
+        
+        <div class="trainer-profile">
+            <div class="trainer-info">
+                <h3>Moncho</h3>
+                <p class="trainer-role">Entrenador Principal</p>
+                <p class="trainer-description">
+                    Ex boxeador profesional con más de 15 años de experiencia en el ring. 
+                    Especializado en técnica avanzada y preparación física para competición. 
+                    Su pasión por el boxeo y su dedicación a la enseñanza han ayudado a formar 
+                    a numerosos boxeadores de éxito.
+                </p>
+                <div class="trainer-specialties">
+                    <h4>Especialidades:</h4>
+                    <ul>
+                        <li><span class="material-icons">sports_martial_arts</span> Técnica Avanzada</li>
+                        <li><span class="material-icons">fitness_center</span> Preparación Física</li>
+                        <li><span class="material-icons">psychology</span> Estrategia de Combate</li>
+                        <li><span class="material-icons">military_tech</span> Preparación para Competición</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="trainer-image">
+                <img src="/moncho.jpg" alt="Moncho - Entrenador Principal de La Esquina Boxing" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .trainers {
+        padding: 6rem 0;
+        background-color: var(--color-dark);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .trainers__title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+        text-transform: uppercase;
+    }
+
+    .text-primary {
+        color: var(--color-primary);
+    }
+
+    .trainer-profile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .trainer-info h3 {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .trainer-role {
+        font-size: 1.2rem;
+        color: var(--color-white);
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .trainer-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .trainer-specialties h4 {
+        color: var(--color-primary);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .trainer-specialties ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .trainer-specialties li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .trainer-specialties .material-icons {
+        color: var(--color-primary);
+    }
+
+    .trainer-image {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .trainer-image::before {
+        content: '';
+        display: block;
+        padding-top: 125%; /* 4:5 aspect ratio */
+    }
+
+    .trainer-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width: 968px) {
+        .trainer-profile {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .trainer-specialties ul {
+            grid-template-columns: 1fr;
+        }
+
+        .trainer-image::before {
+            padding-top: 100%; /* 1:1 aspect ratio on mobile */
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .trainers {
+            padding: 4rem 0;
+        }
+
+        .trainers__title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .trainer-info h3 {
+            font-size: 2rem;
+        }
+    }
+</style>

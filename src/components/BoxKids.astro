@@ -1,0 +1,200 @@
+---
+---
+
+<section class="box-kids" id="box-kids">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section__title">BOXEO <span class="text-primary">KIDS</span></h2>
+            <p class="section__subtitle">Entrenamiento de boxeo para niños de 8 a 14 años</p>
+        </div>
+        
+        <div class="content-grid">
+            <div class="content-text">
+                <h3>¿Por qué Box Kids?</h3>
+                <p>Nuestro programa Box Kids está diseñado especialmente para introducir a los más pequeños en el mundo del boxeo de manera segura y divertida. Desarrollamos habilidades físicas, mentales y sociales.</p>
+                
+                <div class="benefits">
+                    <h4>Beneficios principales:</h4>
+                    <ul>
+                        <li><span class="material-icons">sports_martial_arts</span> Desarrollo de coordinación y equilibrio</li>
+                        <li><span class="material-icons">fitness_center</span> Mejora de la condición física</li>
+                        <li><span class="material-icons">psychology</span> Aumento de la concentración y disciplina</li>
+                        <li><span class="material-icons">groups</span> Fomento del trabajo en equipo</li>
+                        <li><span class="material-icons">sentiment_very_satisfied</span> Diversión y autoconfianza</li>
+                        <li><span class="material-icons">emoji_events</span> Respeto y valores deportivos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-image">
+                <img 
+                    src="/boxkids.avif"
+                    alt="Niño entrenando boxeo con entrenador"
+                />
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>¡Inscribe a tu hijo hoy!</h3>
+            <p>Primera clase gratis - Sin compromiso</p>
+            <a href="#contacto" class="button button--primary">
+                <span class="material-icons">sports_martial_arts</span>
+                Primera clase gratis
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .box-kids {
+        padding: 6rem 0;
+        background-color: var(--color-dark);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    .text-primary {
+        color: var(--color-primary);
+    }
+
+    .section__subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .content-text h3 {
+        color: var(--color-primary);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-text p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+    .benefits h4 {
+        color: var(--color-primary);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefits ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .benefits li {
+        opacity: 0.9;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .benefits li .material-icons {
+        color: var(--color-primary);
+        font-size: 1.25rem;
+    }
+
+    .content-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .cta-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .cta-section h3 {
+        color: var(--color-primary);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .button--primary {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+    }
+
+    .button--primary:hover {
+        background-color: var(--color-primary-dark);
+    }
+
+    @media screen and (max-width: 768px) {
+        .box-kids {
+            padding: 4rem 0;
+        }
+
+        .section__title {
+            font-size: 2rem;
+        }
+
+        .content-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .content-image img {
+            height: 250px;
+        }
+
+        .cta-section {
+            padding: 1rem 0;
+        }
+    }
+</style>

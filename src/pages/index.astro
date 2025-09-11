@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import BoxKids from '../components/BoxKids.astro';
+import BoxWomen from '../components/BoxWomen.astro';
+import BoxGeneral from '../components/BoxGeneral.astro';
+import Schedule from '../components/Schedule.astro';
+import Trainers from '../components/Trainers.astro';
+import Location from '../components/Location.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="La Esquina Boxing - Tu gimnasio de boxeo">
+	<Navbar />
+	<main>
+		<Hero />
+		<BoxGeneral />
+		<BoxKids />
+		<BoxWomen />
+		<Schedule />
+		<Trainers />
+		<Location />
+	</main>
+	<Footer />
+	<WhatsAppFloat />
 </Layout>
