@@ -10,6 +10,16 @@ import Trainers from '../components/Trainers.astro';
 import Location from '../components/Location.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+// Detectar idioma del navegador
+const browserLang = Astro.request.headers.get('accept-language') || '';
+const isEnglish = browserLang.startsWith('en') || browserLang.includes('en-');
+const hasVisited = Astro.cookies.get('language-preference')?.value;
+
+// Si es la primera visita y el idioma es inglés, redirigir
+if (!hasVisited && isEnglish) {
+	return Astro.redirect('/en');
+}
 ---
 
 <Layout 
@@ -30,3 +40,17 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 	<Footer />
 	<WhatsAppFloat />
 </Layout>
+
+<script>
+	// Guardar preferencia de idioma cuando el usuario cambia manualmente
+	document.addEventListener('DOMContentLoaded', function() {
+		const languageLinks = document.querySelectorAll('.language-link');
+		
+		languageLinks.forEach(link => {
+			link.addEventListener('click', function() {
+				// Guardar preferencia en cookie
+				document.cookie = 'language-preference=manual; path=/; max-age=31536000'; // 1 año
+			});
+		});
+	});
+</script>

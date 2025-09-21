@@ -1,0 +1,310 @@
+---
+---
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__section">
+                <div class="footer__logo">
+                    <img src="/logo.jpg" alt="La Esquina Boxing Logo" width="60" height="60">
+                    <div>
+                        <h3>LA ESQUINA</h3>
+                        <p>BOXING TRAINING</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__section">
+                <h4>Navigation</h4>
+                <ul class="footer__links">
+                    <li><a href="#inicio">Home</a></li>
+                    <li><a href="#clases">Classes</a></li>
+                    <li><a href="#horarios">Schedule</a></li>
+                    <li><a href="#entrenadores">Trainers</a></li>
+                    <li><a href="#contacto">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__section">
+                <h4>Schedule</h4>
+                <div class="footer__schedule">
+                    <div class="schedule-day">
+                        <p><strong>Mon - Fri:</strong></p>
+                        <p>09:00 - 13:30</p>
+                        <p>16:00 - 21:30</p>
+                    </div>
+                    <div class="schedule-day">
+                        <p><strong>Saturday:</strong></p>
+                        <p>09:00 - 13:30</p>
+                    </div>
+                    <div class="schedule-day">
+                        <p><strong>Sunday:</strong> Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__section">
+                <h4>Contact</h4>
+                <div class="footer__contact">
+                    <p><span class="material-icons">location_on</span> C. Grama, 2, local 2, 38627 La Camella</p>
+                    <p><span class="material-icons">phone</span> +34 600 000 000</p>
+                    <p><span class="material-icons">email</span> info@laesquinaboxing.com</p>
+                </div>
+            </div>
+
+            <div class="footer__section">
+                <h4>Follow us</h4>
+                <div class="footer__social">
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__divider"></div>
+            <div class="footer__copyright">
+                <p>&copy; 2025 La Esquina Boxing. All rights reserved.</p>
+                <p>Developed with 💪 for champions</p>
+                <div class="footer__credits">
+                    <a href="https://namuratech.com" target="_blank" rel="noopener noreferrer" class="credits-link">
+                        Want a website like this? 👉 Click here - Created by Namura 氷
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        position: relative;
+        background: linear-gradient(to bottom, var(--color-dark), var(--color-black));
+        padding: 3rem 0 1rem;
+    }
+
+    .footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            var(--color-primary) 20%, 
+            var(--color-primary) 80%, 
+            transparent 100%
+        );
+        box-shadow: 
+            0 0 10px var(--color-primary),
+            0 0 20px var(--color-primary),
+            0 0 30px var(--color-primary);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .footer__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer__logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer__logo img {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .footer__logo h3 {
+        font-size: 1.5rem;
+        color: var(--color-primary);
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .footer__logo p {
+        margin: 0;
+        opacity: 0.8;
+        font-size: 0.9rem;
+    }
+
+    .footer__section h4 {
+        color: var(--color-primary);
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .footer__links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer__links a {
+        color: var(--color-white);
+        opacity: 0.8;
+        transition: all 0.3s ease;
+    }
+
+    .footer__links a:hover {
+        color: var(--color-primary);
+        opacity: 1;
+    }
+
+    .footer__schedule {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .schedule-day {
+        margin-bottom: 0.5rem;
+    }
+
+    .schedule-day p {
+        margin-bottom: 0.25rem;
+        opacity: 0.8;
+        font-size: 0.9rem;
+    }
+
+    .schedule-day p:first-child {
+        color: var(--color-primary);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer__contact p {
+        margin-bottom: 0.5rem;
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer__contact p .material-icons {
+        color: var(--color-primary);
+        font-size: 1.1rem;
+    }
+
+    .footer__social {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .social-icon .fab {
+        color: white;
+        font-size: 2rem;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-2px) rotate(5deg);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .footer__divider {
+        height: 1px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            var(--color-gray),
+            transparent
+        );
+        margin: 2rem 0 1rem;
+        opacity: 0.3;
+    }
+
+    .footer__bottom {
+        text-align: center;
+    }
+
+    .footer__copyright p {
+        margin: 0.25rem 0;
+        opacity: 0.7;
+        font-size: 0.9rem;
+    }
+
+    .footer__credits {
+        margin-top: 1rem;
+    }
+
+    .credits-link {
+        display: inline-block;
+        background: linear-gradient(135deg, #2c1810, #3d2817);
+        color: var(--color-white);
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid var(--color-primary);
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .credits-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .credits-link:hover::before {
+        left: 100%;
+    }
+
+    .credits-link:hover {
+        background: linear-gradient(135deg, #3d2817, #4a321f);
+        color: var(--color-white);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        border-color: var(--color-primary);
+    }
+
+    @media screen and (max-width: 768px) {
+        .footer__content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .footer__logo {
+            justify-content: center;
+        }
+
+        .footer__social {
+            justify-content: center;
+        }
+    }
+</style>

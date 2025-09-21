@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components_en/Navbar.astro';
+import Hero from '../../components_en/Hero.astro';
+import BoxKids from '../../components_en/BoxKids.astro';
+import BoxWomen from '../../components_en/BoxWomen.astro';
+import BoxGeneral from '../../components_en/BoxGeneral.astro';
+import Schedule from '../../components_en/Schedule.astro';
+import Trainers from '../../components_en/Trainers.astro';
+import Location from '../../components_en/Location.astro';
+import Footer from '../../components_en/Footer.astro';
+import WhatsAppFloat from '../../components_en/WhatsAppFloat.astro';
+
+// Detectar idioma del navegador
+const browserLang = Astro.request.headers.get('accept-language') || '';
+const isSpanish = browserLang.startsWith('es') || browserLang.includes('es-');
+const hasVisited = Astro.cookies.get('language-preference')?.value;
+
+// Si es la primera visita y el idioma es español, redirigir
+if (!hasVisited && isSpanish) {
+	return Astro.redirect('/');
+}
+---
+
+<Layout
+	title="La Esquina Boxing - Boxing Gym in the South of Tenerife | Boxing Classes"
+	description="La Esquina Boxing - The best boxing gym in the South of Tenerife. Boxing classes for adults, children and women. Train without limits with a single monthly fee of 40€-50€."
+	keywords="boxing south of tenerife, boxing gym tenerife, boxing classes south tenerife, boxing adults tenerife, boxing children tenerife, boxing women tenerife, boxing training tenerife, gym south tenerife, boxing la camella, gym la camella, boxing arona, boxing adeje, boxing santa cruz tenerife"
+	lang="en"
+>
+	<Navbar />
+	<main>
+		<Hero />
+		<BoxGeneral />
+		<BoxKids />
+		<BoxWomen />
+		<Schedule />
+		<Trainers />
+		<Location />
+	</main>
+	<Footer />
+	<WhatsAppFloat />
+</Layout>
+
+<script>
+	// Guardar preferencia de idioma cuando el usuario cambia manualmente
+	document.addEventListener('DOMContentLoaded', function() {
+		const languageLinks = document.querySelectorAll('.language-link');
+		
+		languageLinks.forEach(link => {
+			link.addEventListener('click', function() {
+				// Guardar preferencia en cookie
+				document.cookie = 'language-preference=manual; path=/; max-age=31536000'; // 1 año
+			});
+		});
+	});
+</script>

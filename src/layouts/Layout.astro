@@ -4,18 +4,22 @@ interface Props {
 	description?: string;
 	keywords?: string;
 	canonical?: string;
+	lang?: string;
 }
 
-const { 
-	title, 
+const {
+	title,
 	description = "La Esquina Boxing - Gimnasio de boxeo en el Sur de Tenerife. Clases de boxeo para adultos, niños y mujeres. Entrena sin límites con una única cuota mensual.",
 	keywords = "boxeo sur de tenerife, gimnasio boxeo tenerife, clases boxeo sur tenerife, boxeo adultos tenerife, boxeo niños tenerife, boxeo mujeres tenerife, entrenamiento boxeo tenerife, gimnasio sur tenerife, boxeo la camella, gimnasio la camella, boxeo arona, boxeo adeje",
-	canonical = Astro.url.href
+	canonical = Astro.url.href,
+	lang = "es"
 } = Astro.props;
+
+const ogLocale = lang === "en" ? "en_US" : "es_ES";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -34,7 +38,7 @@ const {
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content="/logo.jpg" />
-		<meta property="og:locale" content="es_ES" />
+		<meta property="og:locale" content={ogLocale} />
 		<meta property="og:site_name" content="La Esquina Boxing" />
 		
 		<!-- Twitter -->
