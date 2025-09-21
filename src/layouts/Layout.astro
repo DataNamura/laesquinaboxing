@@ -1,23 +1,107 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
+	keywords?: string;
+	canonical?: string;
 }
 
-const { title } = Astro.props;
+const { 
+	title, 
+	description = "La Esquina Boxing - Gimnasio de boxeo en el Sur de Tenerife. Clases de boxeo para adultos, niños y mujeres. Entrena sin límites con una única cuota mensual.",
+	keywords = "boxeo sur de tenerife, gimnasio boxeo tenerife, clases boxeo sur tenerife, boxeo adultos tenerife, boxeo niños tenerife, boxeo mujeres tenerife, entrenamiento boxeo tenerife, gimnasio sur tenerife, boxeo la camella, gimnasio la camella, boxeo arona, boxeo adeje",
+	canonical = Astro.url.href
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="La Esquina Boxing - Tu gimnasio de boxeo en la ciudad" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="La Esquina Boxing" />
+		<meta name="geo.region" content="ES-CN" />
+		<meta name="geo.placename" content="La Camella, Tenerife" />
+		<meta name="geo.position" content="28.0805;-16.6822" />
+		<meta name="ICBM" content="28.0805, -16.6822" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/logo.jpg" />
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:site_name" content="La Esquina Boxing" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonical} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content="/logo.jpg" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonical} />
+		
+		<!-- Favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/logo.jpg" />
+		
+		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+		
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SportsActivityLocation",
+			"name": "La Esquina Boxing",
+			"description": "Gimnasio de boxeo en el Sur de Tenerife. Clases de boxeo para adultos, niños y mujeres.",
+			"url": {canonical},
+			"telephone": "+34-XXX-XXX-XXX",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "C. Grama, 2, local 2",
+				"addressLocality": "La Camella",
+				"postalCode": "38627",
+				"addressRegion": "Santa Cruz de Tenerife",
+				"addressCountry": "ES"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "28.0805",
+				"longitude": "-16.6822"
+			},
+			"openingHours": "Mo-Fr 09:00-13:30,16:00-21:30; Sa 09:00-13:30",
+			"priceRange": "€40-€50",
+			"sport": "Boxing",
+			"amenityFeature": [
+				{
+					"@type": "LocationFeatureSpecification",
+					"name": "Boxeo Adultos"
+				},
+				{
+					"@type": "LocationFeatureSpecification", 
+					"name": "Boxeo Niños"
+				},
+				{
+					"@type": "LocationFeatureSpecification",
+					"name": "Boxeo Mujeres"
+				}
+			],
+			"image": "/logo.jpg",
+			"logo": "/logo.jpg"
+		}
+		</script>
 	</head>
 	<body>
 		<slot />
